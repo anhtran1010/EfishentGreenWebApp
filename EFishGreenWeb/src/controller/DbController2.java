@@ -1,4 +1,4 @@
-package user;
+package controller;
 import com.mongodb.MongoClient;
 import com.mongodb.client.*;
 
@@ -15,11 +15,18 @@ public class DbController2<DBObject> {
 	MongoCollection<Document> collection;
 	
 	public DbController2() {
+		MongoClientOptions.Builder builder = new MongoClientOptions.Builder();
+        //build the connection options  
+        builder.maxConnectionIdleTime(60000);//set the max wait time in (ms)
+        MongoClientOptions opts = builder.build();
+
 		uri = new MongoClientURI(
 			    "mongodb://dbEfish:eFish%40CSBSJU19@cluster0-shard-00-00-klemt.mongodb.net:27017,cluster0-shard-00-01-klemt.mongodb.net:27017,cluster0-shard-00-02-klemt.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true");
 
 		mongoClient = new MongoClient(uri);
+
 		database = mongoClient.getDatabase("eFishDB");
+		//mongoClient.getDatabaseNames().forEach(System.out::println);
 		collection = database.getCollection("controlVar");
 	}
 	

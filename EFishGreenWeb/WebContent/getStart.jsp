@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="java.util.LinkedHashMap" %>
+<%@ page import="java.util.LinkedHashMap,controller.*" %>
+
 
 <%
-user user = new user();
-session.setAttribute("user",user);
+	User usr = new User();
+session.setAttribute("user",usr);
 response.sendRedirect("navigation.jsp");
 %>

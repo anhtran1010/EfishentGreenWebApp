@@ -1,13 +1,14 @@
+package controller;
 import java.util.LinkedHashMap;
 
-public class user {
+public class User {
 	private LinkedHashMap<String, String[]> data;
-	private DbController2 db;
-	public user() {
-		db = new DbController2();
+	private DbController2<?> db;
+	public User() {
+		db = new DbController2<Object>();
 		data = new LinkedHashMap<String, String[]>();
 	}
-	public DbController2 getdb() {
+	public DbController2<?> getdb() {
 		return db;
 	}
 	public LinkedHashMap<String, String[]> getImport(){

@@ -7,7 +7,7 @@
 <title>Navigation Page</title>
 <style>
 .background-image {
-  background-image: url("D:/work-space/EFishGreenWeb/img/background.jpg");
+  background-image: url("C:/Users/anhbt/git/EfishentGreenWebApp/EFishGreenWeb/img/background.jpg");
   background-color: #ffffff;
   height: 700px;
   background-position: center;
@@ -53,11 +53,16 @@ border:1px solid #e3e3e3; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
 </head>
 <body>
 <div class = background-image>
-		<img src = "D:\work-space\EFishGreenWeb\img\EFishGreenLogo.png" style="width:100%;"/>
-		<form action="importFile.jsp" method="get" id="importForm">
-		<button class = "button" id ="startButt" onclick="startSession()" type="submit" form="importForm" value="Submit">Import Data</button>
-		</form>
-		
+	<img src = "C:\Users\anhbt\git\EfishentGreenWebApp\EFishGreenWeb\img\EFishGreenLogo.png" style="width:100%;"/>
+	<form action="importFile.jsp" enctype="multipart/form-data" method="post">
+		<p>
+			Please specify a file, or a set of files:<br>
+			<input type="file" name="datafile" size="40">
+		</p>
+		<div>
+			<input type="submit" value="Upload File">
+		</div>
+	</form>
 </div>
 </body>
 </html>
