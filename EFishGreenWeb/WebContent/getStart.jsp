@@ -4,7 +4,8 @@
 
 
 <%
-	User usr = new User();
+LinkedHashMap<String, String[]> input = new LinkedHashMap<>();
+User usr = new User(input);
 session.setAttribute("user",usr);
 response.sendRedirect("navigation.jsp");
 %>

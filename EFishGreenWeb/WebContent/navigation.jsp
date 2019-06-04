@@ -54,14 +54,17 @@ border:1px solid #e3e3e3; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
 <body>
 <div class = background-image>
 	<img src = "C:\Users\anhbt\git\EfishentGreenWebApp\EFishGreenWeb\img\EFishGreenLogo.png" style="width:100%;"/>
-	<form action="importFile.jsp" enctype="multipart/form-data" method="post">
+	<form action="importFile2.jsp" enctype="multipart/form-data" method="post">
 		<p>
 			Please specify a file, or a set of files:<br>
-			<input type="file" name="datafile" size="40">
+			<input type=FILE name=Filename>
 		</p>
 		<div>
-			<input type="submit" value="Upload File">
+			<input type="submit" value="Upload">
 		</div>
+	</form>
+	<form action="generateChart.jsp" method="post" id="chartForm">		
+			<button class = "button" id ="chartButt" type="submit" value="Submit">Charts</button>
 	</form>
 </div>
 </body>

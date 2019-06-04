@@ -4,9 +4,9 @@ import java.util.LinkedHashMap;
 public class User {
 	private LinkedHashMap<String, String[]> data;
 	private DbController2<?> db;
-	public User() {
+	public User(LinkedHashMap<String, String[]> input) {
 		db = new DbController2<Object>();
-		data = new LinkedHashMap<String, String[]>();
+		this.data = input;
 	}
 	public DbController2<?> getdb() {
 		return db;
